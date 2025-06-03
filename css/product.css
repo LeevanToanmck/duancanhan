@@ -1,0 +1,205 @@
+/* .muahang{
+    width: 1500px;
+    flex-wrap: wrap;
+    display: flex;
+}
+.mua{
+    width: 330px;
+    height: 500px;
+    text-align: center; 
+    margin: 20px 10px; 
+    margin-left: 27px;
+    border-radius: 5px solid #ffffff;
+}
+
+.anh2
+{   
+    width:260px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px solid #ffffff;
+}
+.anh2 img
+{   
+    width:260px;
+    height: 300px;
+}
+
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.mua:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.mua{
+    width: 413px;
+    height: 513px;
+    text-align: center; 
+    margin: 20px 10px; 
+    margin-left: 30px;
+    border-radius: 5px solid #ffffff;
+    background-color: #f9f9f9;
+}
+.anh2
+{   
+    width:413px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px solid #ffffff;
+}
+.anh2 img
+{   
+    width:413px;
+    height: 413px;
+}
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.muahang{
+    margin-top: 80px;
+    width: 1500px;
+    flex-wrap: wrap;
+    display: flex;
+    /* justify-content: center; */
+}
+.mua p{
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+.mua h3{
+    font-size: 20px;
+    color: #000;
+    margin: 10px 0;
+}
+.mua button{
+    width: 100px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.mua button:focus{
+    outline: none;
+}
+.mua button:active{
+    transform: scale(0.98);
+}
+
+.mua button:disabled:hover{
+    background-color: #cccccc;
+}
+.mua button:disabled:active{
+    transform: none;
+}
+/* nó đang bị để hàng dọc giở chuyển sang hàng ngang */
+
+.muahang{
+    width: 1500px;
+    flex-wrap: wrap;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* di chuột vào hiện phần input */
+.mua:hover input{
+    display: block;
+}
+.mua input{
+    margin-left: 80px;
+    display: none;
+}
+/* .mua:hover input{
+    display: block;
+} */
+input{
+    margin-top: 20px;
+    width: 160px;
+    height: 40px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+/* .mua .price{
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.mua .description{
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+.mua .rating{
+    font-size: 16px;
+    color: #ff9800;
+    margin: 10px 0;
+}
+.mua .rating i{
+    color: #ff9800;
+}
+.mua .rating span{
+    margin-left: 5px;
+    color: #333;
+}
+.mua .availability{
+    font-size: 14px;
+    color: #28a745;
+    margin: 10px 0;
+}
+.mua .availability.out-of-stock{
+    color: #dc3545;
+}
+.mua .availability.in-stock{
+    color: #28a745;
+}
+.mua .availability span{
+    font-weight: bold;
+}
+.mua .availability i{
+    margin-right: 5px;
+}
+.mua .availability i.in-stock{
+    color: #28a745;
+}
+.mua .availability i.out-of-stock{
+    color: #dc3545;
+}
+.mua .availability i{
+    font-size: 16px;
+}
+.mua .availability span{
+    font-weight: bold;
+}
+.mua .availability i.in-stock{
+    color: #28a745;
+}
+.mua .availability i.out-of-stock{
+    color: #dc3545;
+}
+.mua .availability i{
+    font-size: 16px;
+}
+.mua .availability span{
+    font-weight: bold;
+} */
