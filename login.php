@@ -24,6 +24,7 @@
             <button type="submit" name ="dangnhap">Đăng nhập</button>
             <div class="link">
                 <p><a href="login.php">Bạn đã quên mật khẩu đăng nhập?</a></p>
+                
                 <p><a href="register.php">Chưa có tài khoản? Đăng ký</a></p>
             </div>
         </form>

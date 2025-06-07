@@ -15,7 +15,7 @@
             <div class="anh"><a href="#"><img src="./img/banner (2).png " alt=""></a></div>
             <div class="menu">
                 <ul class="menu-ul">
-                    <li class="menu-li"><a href="#">ALL</a> </li>
+                    <li class="menu-li"><a href="">ALL</a> </li>
                     <li class="menu-li"><a href="#">MEN</a> </li>
                     <li class="menu-li"><a href="#">WOMEN</a> </li>
                     <li class="menu-li"><a href="#">UNISEX</a> </li>

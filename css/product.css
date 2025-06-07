@@ -1,3 +1,4 @@
+
 /* .muahang{
     width: 1500px;
     flex-wrap: wrap;
@@ -34,23 +35,23 @@
     box-sizing: border-box;
 } */
 .mua:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(165, 165, 165, 0.1);
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
 .mua{
-    width: 413px;
-    height: 513px;
+    width: 333px;
+    height: 510px;
     text-align: center; 
     margin: 20px 10px; 
     margin-left: 30px;
-    border-radius: 5px solid #ffffff;
-    background-color: #f9f9f9;
+   
+    background-color: #ffffff;
 }
 .anh2
 {   
-    width:413px;
-    height: 300px;
+    width:333px;
+    height: 333px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -58,8 +59,8 @@
 }
 .anh2 img
 {   
-    width:413px;
-    height: 413px;
+    width:333px;
+    height: 333px;
 }
 *{
     font-family: sans-serif;
@@ -139,67 +140,6 @@ input{
     font-size: 16px;
     text-align: center;
 }
-/* .mua .price{
-    font-size: 18px;
-    color: #28a745;
-    font-weight: bold;
-    margin: 10px 0;
-}
-.mua .description{
-    font-size: 14px;
-    color: #666;
-    margin: 10px 0;
-}
-.mua .rating{
-    font-size: 16px;
-    color: #ff9800;
-    margin: 10px 0;
-}
-.mua .rating i{
-    color: #ff9800;
-}
-.mua .rating span{
-    margin-left: 5px;
-    color: #333;
-}
-.mua .availability{
-    font-size: 14px;
-    color: #28a745;
-    margin: 10px 0;
-}
-.mua .availability.out-of-stock{
-    color: #dc3545;
-}
-.mua .availability.in-stock{
-    color: #28a745;
-}
-.mua .availability span{
-    font-weight: bold;
-}
-.mua .availability i{
-    margin-right: 5px;
-}
-.mua .availability i.in-stock{
-    color: #28a745;
-}
-.mua .availability i.out-of-stock{
-    color: #dc3545;
-}
-.mua .availability i{
-    font-size: 16px;
-}
-.mua .availability span{
-    font-weight: bold;
-}
-.mua .availability i.in-stock{
-    color: #28a745;
-}
-.mua .availability i.out-of-stock{
-    color: #dc3545;
-}
-.mua .availability i{
-    font-size: 16px;
-}
-.mua .availability span{
-    font-weight: bold;
-} */
+input[type="button"] {
+    cursor: pointer;
+}       

@@ -116,6 +116,10 @@ button:hover {
     color: #9d9999;
 
 }
+.link a{
+    margin : 10px;   
+
+}
 
 .link a {
 
@@ -123,6 +127,6 @@ button:hover {
 
     text-decoration: none;
 
-    color: #9d9999;
+    color: #cfcfcf;
 
 }

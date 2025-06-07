@@ -17,7 +17,6 @@
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
             ?>
-
             <a href="">
                 <div class="mua" width="300px">
                     <div class="anh2"><img src="./img/WAo/<?php echo $row['hinhanhsp']; ?>" alt=""></div>
