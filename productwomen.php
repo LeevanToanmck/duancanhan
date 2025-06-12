@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/product.css">
-    <title>Men - Dripped Stonie</title>
+    <title>Women-Dripped Stonie</title>
 </head>
 <body>
     
@@ -15,7 +15,7 @@
         include "connect.php";
         include "menu.php"; // Bao gồm menu
         // Lấy danh sách sản phẩm của nữ từ cơ sở dữ liệu
-        $sql = "SELECT * FROM sanpham WHERE loaisp ='Nam' OR loaisp ='Cả Nam Cả Nữ'"; // Lấy sản phẩm của nữ và nam
+        $sql = "SELECT * FROM sanpham WHERE loaisp ='Nữ'";
         $result = mysqli_query($conn, $sql);
         ?>
         <div class="muahang">

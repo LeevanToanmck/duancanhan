@@ -21,7 +21,7 @@
             </div>
             <div class="inputField">
                 <input type="password" id="password" name="repassword" required>
-                <label for="password">Nhập lại mật khẩu:</label>
+                <label for="password">Xác nhận mật khẩu:</label>
             </div>
             <div class="inputField">
                 <input type="text" id="email" name="email" required>

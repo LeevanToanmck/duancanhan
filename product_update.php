@@ -10,36 +10,10 @@ $result = mysqli_query($conn, $sql);
 
 <!DOCTYPE html>
 <html lang="vi">
+    <link rel="stylesheet" href="css/product_update.css">
 <head>
     <meta charset="UTF-8">
     <title>Danh sách sản phẩm bảo hành</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: Arial, sans-serif;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .btn {
-            padding: 6px 10px;
-            text-decoration: none;
-            border-radius: 4px;
-            color: white;
-        }
-        .edit {
-            background-color: #007bff;
-        }
-        .delete {
-            background-color: #dc3545;
-        }
-    </style>
 </head>
 <body>
 
@@ -74,12 +48,11 @@ $result = mysqli_query($conn, $sql);
                 <td>{$product['giasp']} đ</td>
                 <td>{$product['baohanh']}</td>
                 <td>
-                    <a href='edit.php?this_id={$product['masp']}' class='btn edit'>✏️</a>
-                    <a href='delete.php?this_id={$product['masp']}'class='btn edit'>🗑️</a> 
+                    <a href='edit.php?this_id={$product['masp']}' class='btn edit'>Sửa</a>
+                    <a href='delete.php?this_id={$product['masp']}'class='btn edit'>Xóa</a> 
                 </td>
             </tr>";
             $stt++;
-
         } 
         ?>
     </tbody>

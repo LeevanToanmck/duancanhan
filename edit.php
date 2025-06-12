@@ -28,7 +28,7 @@ if (isset($_POST['btn'])) {
     $update_sql = "UPDATE sanpham SET tensp='$tensp', loaisp='$loaisp', hinhanhsp='$hinhanhsp', giasp='$giasp', baohanh='$baohanh' WHERE masp='$this_id'";
     
     if (mysqli_query($conn, $update_sql)) {
-        header("Location: product__details.php");
+        header("Location: product__update.php");
         exit();
     } else {
         echo "Lỗi khi cập nhật sản phẩm: " . mysqli_error($conn);

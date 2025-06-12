@@ -18,16 +18,15 @@
         <p>Số 0 Mai Anh Tuấn, Đống Đa, Hà Nội.</p>
 
         <h3>Liên Hệ:</h3>
-        <p>(+84) 345 344 420</p>
+        <p>(+84) 345 345 420</p>
         <p>drippedstonie420@gmail.com</p>
 
         <div class="social-icons">
-          <a href="https://www.instagram.com/drippedsnie/"><img class="conter" src="img/instagram.svg" alt=""></a>
+          <a href="https://www.instagram.com/drippedsnie/"><img class="conter" src="img/insa.png" alt=""></a>
           <a href="https://www.facebook.com/profile.php?id=61576591665336&locale=vi_VN"><img class="conter"
-              src="img/square-facebook.svg" alt=""></a>
-          <a href=""><img class="conter" src="img/tiktok.svg" alt=""></a>
+              src="img/facebook.png" alt=""></a>
+          <a href=""><img class="conter" src="img/tiktok.png" alt=""></a>
         </div>
-
         <div class="footer-links">
           <a href="#">CHÍNH SÁCH ĐỔI TRẢ</a>
           <a href="#">GIỚI THIỆU</a>
