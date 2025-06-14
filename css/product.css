@@ -34,7 +34,7 @@
     box-sizing: border-box;
 } */
 .mua:hover{
-    box-shadow: 0 0 10px rgba(145, 145, 145, 0.1);
+    box-shadow: 0 0 10px rgba(47, 47, 47, 0.1);
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
@@ -54,7 +54,7 @@
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 5px solid #ffffff;
+    border-radius: 5px solid #000000;
 }
 .anh2 img
 {   
@@ -65,7 +65,6 @@
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 .muahang{
     margin-top: 80px;
@@ -81,14 +80,14 @@
 }
 .mua h3{
     font-size: 20px;
-    color: #ffffff;
+    color: #000000;
     margin: 10px 0;
 }
 .mua button{
     width: 100px;
     height: 40px;
     background-color: #007bff;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;

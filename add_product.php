@@ -66,6 +66,7 @@ include "connect.php";
                 <input type="text" name="product_warranty" required>
             </div>
             <input type="submit" name="btn" value="Thêm sản phẩm">
+            <a href="admin.php" class="btn btn-secondary">Quay lại</a>
         </div>
     </form>
 </body>

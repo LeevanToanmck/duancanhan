@@ -10,16 +10,15 @@ img{
   width: 40px;
     margin: 0 auto;
       height: 40px;
-    /* background-color: #fff; */
 }
 body {
-    width: 1500px;
+    width: 1460px;
     margin: 0;
     font-family: 'Arial', sans-serif;
   }
 
   .footer {
-    width: 1500px;
+    width: 1370px;
     display: flex;
     justify-content: center;
     align-items: stretch;

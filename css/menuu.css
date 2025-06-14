@@ -1,8 +1,7 @@
 *{
     font-family: sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 0;     
 }
 #khung{
     width: 1500px;
@@ -15,7 +14,7 @@
     position: fixed; 
     top: 0;
     left: 0;
-    width: 1500px;
+    width: 1430px;
     height: 80px; 
     background: #ffffff;
     z-index: 100; 
@@ -32,16 +31,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
     height: 80px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     z-index: 999;
   }
- 
 .anh img{
-margin: 9px 0px;
-margin-left: 0px;
+    margin-left: 20px;
     width: 240px;
     height: 60px;
     display: flex;

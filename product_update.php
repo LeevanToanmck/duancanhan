@@ -48,8 +48,8 @@ $result = mysqli_query($conn, $sql);
                 <td>{$product['giasp']} đ</td>
                 <td>{$product['baohanh']}</td>
                 <td>
-                    <a href='edit.php?this_id={$product['masp']}' class='btn edit'>Sửa</a>
-                    <a href='delete.php?this_id={$product['masp']}'class='btn edit'>Xóa</a> 
+                        <a href='edit_product.php?this_id={$product['masp']}' class='btn edit'>Sửa</a>
+                        <a href='delete.php?this_id={$product['masp']}'class='btn edit'>Xóa</a> 
                 </td>
             </tr>";
             $stt++;

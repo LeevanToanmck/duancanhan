@@ -9,8 +9,8 @@ if (!isset($_SESSION['username']) || $_SESSION['level'] != 1) {
 }
 
 // Lấy thông tin sản phẩm cần sửa
-if (isset($_GET['id'])) {
-    $masp = $_GET['id'];
+if (isset($_GET['this_id'])) {
+    $masp = $_GET['this_id'];
     $sql = "SELECT * FROM sanpham WHERE masp = '$masp'";
     $result = mysqli_query($conn, $sql);
     $product = mysqli_fetch_assoc($result);
@@ -51,48 +51,13 @@ if (isset($_POST['update'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="css/editproduct.css">
     <title>Sửa sản phẩm</title>
-    <style>
-        .edit-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .current-image {
-            max-width: 200px;
-            margin: 10px 0;
-        }
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            color: white;
-        }
-        .btn-primary {
-            background-color: #007bff;
-        }
-        .btn-secondary {
-            background-color: #6c757d;
-        }
-    </style>
+
 </head>
 <body>
     <div class="edit-container">
+
         <h2>Sửa sản phẩm</h2>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -122,6 +87,7 @@ if (isset($_POST['update'])) {
             
             <div class="form-group">
                 <label>Hình ảnh hiện tại:</label>
+
                 <img src="./img/WAo/<?php echo $product['hinhanhsp']; ?>" class="current-image">
             </div>
             
@@ -135,4 +101,4 @@ if (isset($_POST['update'])) {
         </form>
     </div>
 </body>
-</html> 
+</html>     

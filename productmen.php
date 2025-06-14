@@ -1,4 +1,36 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+include "connect.php";
 
+// Xử lý thêm vào giỏ hàng
+if (isset($_POST['add_to_cart'])) {
+    // Kiểm tra đăng nhập
+    if (!isset($_SESSION['username'])) {
+        echo "<script>alert('Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng!'); window.location.href='login.php';</script>";
+        exit();
+    }
+
+    $masp = $_POST['product_id'];
+    $makh = $_SESSION['id'];
+    
+    // Kiểm tra sản phẩm đã có trong giỏ hàng chưa
+    $sql = "SELECT * FROM giohang WHERE makh = '$makh' AND masp = '$masp'";
+    $result = mysqli_query($conn, $sql);
+    
+    if (mysqli_num_rows($result) > 0) {
+        // Cập nhật số lượng nếu đã có
+        $sql = "UPDATE giohang SET soluong = soluong + 1 WHERE makh = '$makh' AND masp = '$masp'";
+    } else {
+        // Thêm mới vào giỏ hàng
+        $sql = "INSERT INTO giohang (makh, masp, soluong) VALUES ('$makh', '$masp', 1)";
+    }
+    
+    mysqli_query($conn, $sql);
+    echo "<script>alert('Đã thêm sản phẩm vào giỏ hàng!');</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,38 +40,28 @@
     <title>Men - Dripped Stonie</title>
 </head>
 <body>
-    
+    <?php include "menu.php"; ?>
     <div class="muahang">
         <?php
-        // Kết nối đến cơ sở dữ liệ
-        include "connect.php";
-        include "menu.php"; // Bao gồm menu
-        // Lấy danh sách sản phẩm của nữ từ cơ sở dữ liệu
-        $sql = "SELECT * FROM sanpham WHERE loaisp ='Nam' OR loaisp ='Cả Nam Cả Nữ'"; // Lấy sản phẩm của nữ và nam
+        $sql = "SELECT * FROM sanpham WHERE loaisp ='Nam' OR loaisp ='Cả Nam Cả Nữ'";
         $result = mysqli_query($conn, $sql);
-        ?>
-        <div class="muahang">
-        <?php
         while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-                <div class="mua" width="300px">
-                    <div class="anh2"><img src="./img/WAo/<?php echo $row['hinhanhsp']; ?>" alt=""></div>
-                    <p><?php echo $row['tensp']; ?>
-                        <br>
-                    <div>
-
-                        <p><?php echo number_format($row['giasp']); ?><u>đ</u></p>
-
-                    </div>
-                    <form action="product.php" method="post">
+        ?>
+            <div class="mua">
+                <div class="anh2"><img src="./img/WAo/<?php echo $row['hinhanhsp']; ?>" alt=""></div>
+                <p><?php echo $row['tensp']; ?></p>
+                <div>
+                    <p><?php echo number_format($row['giasp']); ?><u>đ</u></p>
+                </div>
+                <form action="" method="post">
                     <input type="hidden" name="product_id" value="<?php echo $row['masp']; ?>">
                     <input type="submit" name="add_to_cart" value="Thêm vào giỏ" class="btn">
                 </form>
-                </div>
-            <?php
+            </div>
+        <?php
         }
-        include "footer.php";
         ?>
     </div>
+    <?php include "footer.php"; ?>
 </body>
 </html>

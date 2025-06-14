@@ -7,10 +7,9 @@
 body {
     font-family: Arial, sans-serif;
     background: #f4f6f9;
-    color: #ffffff;
+    color: #000000;
     line-height: 1.6;
 }
-
 /* Admin Container */
 .admin-container {
     max-width: 1515px;
@@ -64,7 +63,7 @@ body {
 }
 .logout-btn {
     background: #e74c3c;
-    color: #fff;
+    color: #ffffff;
 }
 .logout-btn:hover {
     background: #c0392b;
