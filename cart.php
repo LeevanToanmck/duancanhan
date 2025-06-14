@@ -48,12 +48,13 @@ if (isset($_GET['remove'])) {
 $cart_items = array();
 $total = 0;
 
-$sql = "SELECT g.*, s.* FROM giohang g 
+$sql = "SELECT g.*, s.* FROM giohang g
         JOIN sanpham s ON g.masp = s.masp 
         WHERE g.makh = '$makh'";
 $result = mysqli_query($conn, $sql);
 
 while ($row = mysqli_fetch_assoc($result)) {
+
     $row['subtotal'] = $row['giasp'] * $row['soluong'];
     $total += $row['subtotal'];
     $cart_items[] = $row;
@@ -66,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/CART.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -107,10 +108,13 @@ while ($row = mysqli_fetch_assoc($result)) {
             
             <div class="cart-total">
                 <p>Tổng cộng: <strong><?php echo number_format($total); ?> VNĐ</strong></p>
-                <button class="checkout-btn"><i class="fas fa-credit-card"></i> Thanh toán</button>
+                    <a class="checkout-btn" href="checkout.php"><i class="fas fa-credit-card"></i> Thanh toán</a>
             </div>
         <?php endif; ?>
     </div>
+    <?php
+    include 'footer.php';
+    ?>
     </div>
 </body>
 </html>

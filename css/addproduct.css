@@ -1,4 +1,108 @@
+/* Add Product Page Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.add_product {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.add_product h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.inputField, .inputimg {
+    margin-bottom: 20px;
+}
+
+.inputField p, .inputimg p {
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.inputField input,
+.inputimg input,
+.inputField select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.inputField input:focus,
+.inputimg input:focus,
+.inputField select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+.inputField select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.inputimg img {
+    max-width: 200px;
+    margin: 10px 0;
+    border-radius: 6px;
+    display: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add_product {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .add_product h2 {
+        font-size: 20px;
+    }
+    
+    .inputField input,
+    .inputimg input,
+    .inputField select {
+        padding: 10px;
+    }
+}
 
 .add-product{
     width: 100%;

@@ -13,11 +13,13 @@ img{
     /* background-color: #fff; */
 }
 body {
+    width: 1500px;
     margin: 0;
     font-family: 'Arial', sans-serif;
   }
 
   .footer {
+    width: 1500px;
     display: flex;
     justify-content: center;
     align-items: stretch;

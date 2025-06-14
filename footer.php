@@ -12,7 +12,7 @@
 
   <body>
 
-    <div class="footer">
+    <div class="footer" >
       <div class="footer-left">
         <h2>Popup Store:</h2>
         <p>Số 0 Mai Anh Tuấn, Đống Đa, Hà Nội.</p>

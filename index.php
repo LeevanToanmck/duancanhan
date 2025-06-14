@@ -10,6 +10,7 @@
 <body>
     <?php
     include "connect.php"; // Kết nối đến cơ sở dữ liệu
+    
     // Kiểm tra nếu người dùng đã đăng nhập
         session_start();
 
