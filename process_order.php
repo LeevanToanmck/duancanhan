@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $makh = $_SESSION['id'];
     $diachigiaohang = $_POST['diachi'];
     $sdtgiaohang = $_POST['sdt'];
+    $note = $_POST['note'];
     $phuongthuctt = $_POST['phuongthuctt'];
     $ngaydat = date('Y-m-d H:i:s');
     $trangthai = 'Chờ xác nhận';
@@ -32,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     mysqli_stmt_close($stmt);
 
     // Thêm đơn hàng vào bảng donhang
-    $sql = "INSERT INTO donhang (makh, ngaydat, tongtien, trangthai, diachigiaohang, sdtgiaohang, phuongthuctt) VALUES (?, ?, ?, ?, ?, ?, ?)";
+      $sql = "INSERT INTO donhang (makh, ngaydat, tongtien, trangthai, diachigiaohang, sdtgiaohang, ghichu , phuongthuctt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "isdssss", $makh, $ngaydat, $tongtien, $trangthai, $diachigiaohang, $sdtgiaohang, $phuongthuctt);
+    mysqli_stmt_bind_param($stmt, "ssssssss", $makh, $ngaydat, $tongtien, $trangthai, $diachigiaohang, $sdtgiaohang, $note, $phuongthuctt);
     if (mysqli_stmt_execute($stmt)) {
         $madonhang = mysqli_insert_id($conn);
         mysqli_stmt_close($stmt);

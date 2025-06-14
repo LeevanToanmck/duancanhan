@@ -9,9 +9,13 @@ body {
     background: #f4f6f9;
     color: #000000;
     line-height: 1.6;
+
+  
 }
 /* Admin Container */
 .admin-container {
+
+    /* display: flex; */
     max-width: 1515px;
     margin: 30px auto;
     padding: 10px;

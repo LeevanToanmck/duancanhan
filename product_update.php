@@ -2,6 +2,9 @@
 <?php
 include 'connect.php'; // Gọi file kết nối
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 // Truy vấn dữ liệu sản phẩm
 $sql = "SELECT * FROM sanpham";
 $result = mysqli_query($conn, $sql);

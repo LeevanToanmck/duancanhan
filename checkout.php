@@ -56,8 +56,6 @@ if (isset($_SESSION['id'])) {
                     </div>
                     <label>Địa chỉ *</label>
                     <input type="text" name="diachi" required>
-                    <label>Thị trấn / Thành phố *</label>
-                    <input type="text" name="thanhpho" required>
                     <label>Địa chỉ email *</label>
                     <input type="email" name="email" required>
                     <div>
@@ -69,7 +67,6 @@ if (isset($_SESSION['id'])) {
 <select class="pttt" name="phuongthuctt" required>
     <option value="Chuyển khoản">Chuyển khoản</option>
     <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
-    <option value="Momo">Momo</option>
 </select>
                     <button type="submit">Đặt hàng</button>
                 </div>

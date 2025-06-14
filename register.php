@@ -38,7 +38,7 @@
     if(isset($_POST["dangky"])){
         $email= $_POST['email'];
         $username = $_POST['username'];
-        // Kiểm tra định dạng email
+        // Kiểm tra định dạng email 
         if (empty($_POST['email'])) {
             echo 'Vui lòng nhập địa chỉ email.';
             exit();
