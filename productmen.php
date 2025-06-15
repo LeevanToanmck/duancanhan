@@ -43,23 +43,25 @@ if (isset($_POST['add_to_cart'])) {
     <?php include "menu.php"; ?>
     <div class="muahang">
         <?php
-        $sql = "SELECT * FROM sanpham WHERE loaisp ='Nam' OR loaisp ='Cả Nam Cả Nữ'";
+        $sql = "SELECT * FROM sanpham WHERE loaisp ='Nam' OR loaisp ='ca_nam_ca_nu'";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-            <div class="mua">
-                <div class="anh2"><img src="./img/WAo/<?php echo $row['hinhanhsp']; ?>" alt=""></div>
-                <p><?php echo $row['tensp']; ?></p>
-                <div>
-                    <p><?php echo number_format($row['giasp']); ?>VNĐ</p>
+            ?>
+                <div class="mua">
+                    <div class="anh2">
+                        <img src="./img/WAo/<?php echo $row['hinhanhsp']; ?>" alt="<?php echo $row['tensp']; ?>">
+                    </div>
+                    <h3><?php echo $row['tensp']; ?></h3>
+                    <div class="price">
+                        <p><?php echo number_format($row['giasp']); ?>VNĐ</p>
+                    </div>
+                    <form action="" method="post">
+                        <input type="hidden" name="product_id" value="<?php echo $row['masp']; ?>">
+                        <input type="submit" name="add_to_cart" value="Thêm vào giỏ" class="btn">
+                    </form>
                 </div>
-                <form action="" method="post">
-                    <input type="hidden" name="product_id" value="<?php echo $row['masp']; ?>">
-                    <input type="submit" name="add_to_cart" value="Thêm vào giỏ" class="btn">
-                </form>
-            </div>
-        <?php
-        }
+            <?php
+            }
         ?>
     </div>
     <?php include "footer.php"; ?>

@@ -57,7 +57,7 @@ if (isset($_POST['add_to_cart'])) {
                 </div>
                 <h3><?php echo $row['tensp']; ?></h3>
                 <div class="price">
-                    <p><?php echo number_format($row['giasp']); ?><u>VNĐ</u></p>
+                    <p><?php echo number_format($row['giasp']); ?>VNĐ</p>
                 </div>
                 <form action="" method="post">
                     <input type="hidden" name="product_id" value="<?php echo $row['masp']; ?>">
