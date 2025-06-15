@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link rel="stylesheet" href="./css/menuu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>monkey man</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
                         <li class="menu-li"><input type="text" name="keyword" placeholder="Nhập tên sản phẩm..."
                                 value="<?= isset($_GET['keyword']) ? htmlspecialchars($_GET['keyword']) : '' ?>"><button
                                 type="submit">search</button></li>
-                        <li class="menu-li"><a href="cart.php">Cart</a> </li>
+                        <li class="menu-li"><a href="cart.php"><i class="fas fa-shopping-cart"></i>Cart</a> </li>
                         <!-- khi đăng nhập thành công thì login sẽ thành logout -->
                         <?php
                           if (session_status() == PHP_SESSION_NONE) {

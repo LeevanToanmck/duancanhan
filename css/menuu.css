@@ -83,12 +83,16 @@
 
 
 #dau .menu-li a:hover{
-    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0.8);
     color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 } 
 .menu-li input{
     width: 213px;
-    height: 40px;
+    height: 30px;
     border-radius: 6px;
     border: 1px solid #ccc;
     padding-left: 10px;
@@ -96,7 +100,6 @@
 }
 .menu-li input:focus{
     outline: none;
-    border-color: #007bff;
 }
 .menu-li button{
     margin-left: 10px;

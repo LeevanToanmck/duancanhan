@@ -36,8 +36,8 @@ body {
   }
 
   .footer-right {
-    font-family: 'Signatura Monoline';
-    font-size: 48px;
+    font-family: 'Freestyle Script', Times, serif;
+    font-size: 80px;
     display: flex;
     align-items: center;
     justify-content: center;

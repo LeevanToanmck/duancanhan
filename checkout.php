@@ -78,18 +78,18 @@ if (isset($_SESSION['id'])) {
                             <div class="order-product-info">
                                 <b><?php echo $item['tensp']; ?></b>
                                 <div class="order-label">Số lượng: <?php echo $item['soluong']; ?></div>
-                                <div class="order-label">Đơn giá: <?php echo number_format($item['giasp']); ?> đ</div>
+                                <div class="order-label">Đơn giá: <?php echo number_format($item['giasp']); ?> VNĐ</div>
                             </div>
-                            <div class="order-total"><?php echo number_format($item['thanhtien']); ?> đ</div>
+                            <div class="order-total"><?php echo number_format($item['thanhtien']); ?> VNĐ</div>
                         </div>
                     <?php endforeach; ?>
                     <hr>
                     <div class="order-label">Tạm tính</div>
-                    <div class="order-total"><?php echo number_format($total); ?> đ</div>
+                    <div class="order-total"><?php echo number_format($total); ?> VNĐ</div>
                     <div class="order-label">Giao hàng</div>
                     <div>Giao hàng miễn phí</div>
                     <hr>
-                    <div class="order-total">Tổng: <?php echo number_format($total); ?> đ</div>
+                    <div class="order-total">Tổng: <?php echo number_format($total); ?> VNĐ</div>
                 </div>
             </form>
         <?php endif; ?>

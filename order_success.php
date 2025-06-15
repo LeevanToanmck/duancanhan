@@ -176,19 +176,19 @@ $order_items = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="item-details">
                     <div class="item-name"><?php echo $item['tensp']; ?></div>
                     <div class="item-price">
-                        <?php echo number_format($item['dongia']); ?>đ
+                        <?php echo number_format($item['dongia']); ?>VNĐ
                         <span class="item-quantity">x <?php echo $item['soluong']; ?></span>
                     </div>
                 </div>
                 <div class="item-total">
-                    <?php echo number_format($item['subtotal']); ?>đ
+                    <?php echo number_format($item['subtotal']); ?>VNĐ
                 </div>
             </div>      
 
             <?php endforeach; ?>
             
             <div class="total-amount">
-                Tổng cộng: <?php echo number_format($order['tongtien']); ?>đ
+                Tổng cộng: <?php echo number_format($order['tongtien']); ?>VNĐ
             </div>
         </div>
 

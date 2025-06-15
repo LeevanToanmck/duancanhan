@@ -48,7 +48,7 @@ $result = mysqli_query($conn, $sql);
                 <td><img src='./img/WAo/{$product['hinhanhsp']}' alt='Ảnh sản phẩm' style='width: 100px; height: auto;'></td>
                 <td>{$product['tensp']}</td>
                 <td>{$product['loaisp']}</td>
-                <td>{$product['giasp']} đ</td>
+                <td>{$product['giasp']} VNĐ</td>
                 <td>{$product['baohanh']}</td>
                 <td>
                         <a href='edit_product.php?this_id={$product['masp']}' class='btn edit'>Sửa</a>
