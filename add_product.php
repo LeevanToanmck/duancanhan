@@ -46,11 +46,10 @@ include "connect.php";
             <div class="inputField">
                 <p>loại sản phẩm:</p>
                 <select name="product_type" required>
-                    <option value="nam" name="Nam">Nam</option>
-                    <option value="nu" name="Nữ">Nữ</option>
-                    <option value="ca_nam_ca_nu" name="Cả Nam Cả Nữ">Cả Nam Cả Nữ</option>
-                    <option value="mat_kinh" name="Phụ kiện">Phụ kiện</option>
-                </select>
+                    <option value="Nam" name="Nam">Nam</option>
+                    <option value="Nữ" name="Nữ">Nữ</option>
+                    <option value="Cả Nam Cả Nữ" name="Cả Nam Cả Nữ">Cả Nam Cả Nữ</option>
+                    <option value="Phụ kiện" name="Phụ kiện">Phụ kiện</option>
             </div>
             <div class="inputimg">
                 <p>Hình ảnh sản phẩm:</p>

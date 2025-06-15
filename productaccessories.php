@@ -43,7 +43,7 @@ if (isset($_POST['add_to_cart'])) {
     <?php include "menu.php"; ?>
     <div class="muahang">
         <?php
-        $sql = "SELECT * FROM sanpham WHERE loaisp ='Phu_kien'";
+        $sql = "SELECT * FROM sanpham WHERE loaisp ='Phụ kiện'";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
             ?>
