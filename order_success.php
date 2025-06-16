@@ -140,6 +140,7 @@ $order_items = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <i class="fas fa-check-circle success-icon"></i>
             <h1 class="success-title">Đặt hàng thành công!</h1>
             <p>Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ xử lý đơn hàng của bạn sớm nhất có thể.</p>
+            <p>Đơn hàng của bạn sẽ được xử lý trong vòng 24 giờ, vui lòng để ý đến email hoặc số điện thoại để nhận thông báo.</p>
         </div>
 
         <div class="order-info">
@@ -184,7 +185,6 @@ $order_items = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <?php echo number_format($item['subtotal']); ?>VNĐ
                 </div>
             </div>      
-
             <?php endforeach; ?>
             
             <div class="total-amount">

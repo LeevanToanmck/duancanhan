@@ -17,5 +17,5 @@ if (session_status() == PHP_SESSION_NONE) {
         echo "Lỗi khi xóa sản phẩm: " . mysqli_error($conn);
     }
     // Đóng kết nối
-    mysqli_close($conn);
+    mysqli_close($conn); 
     ?>
