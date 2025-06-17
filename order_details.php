@@ -32,12 +32,17 @@ $result = mysqli_query($conn, $sql);
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
+            background-color:rgb(41, 87, 133);
+            margin: 0 auto;
+            width: 1400px;
             padding: 20px;
-        }
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        } 
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -166,13 +171,28 @@ $result = mysqli_query($conn, $sql);
         .continue-shopping:hover {
             background-color: #357abd;
         }
+        i{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        h1{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 40px;
+           align-items: center;
+        }
     </style>
 </head>
 <body>
     
-    <div class="container">
-        <h1>Đơn hàng của tôi</h1>
-        
+    <div class="container"><a href="cart.php"><i class="fas fa-arrow-left"></i></a>
+            
+       <center><h1>Đơn hàng của tôi</h1></center>       
         <?php if (mysqli_num_rows($result) > 0): ?>
             <div class="order-list">
                 <?php 
@@ -192,11 +212,11 @@ $result = mysqli_query($conn, $sql);
                         $current_order = $row['madh'];
                         $order_total = 0;
                 ?>
-                        <div class="order-item">
+                        <div class="order-item">    
                             <div class="order-header">
                                 <div class="order-info">
-                                    <div class="order-number">Đơn hàng #<?php echo $row['madh']; ?></div>
-                                    <div class="order-date">Ngày đặt: <?php echo date('d/m/Y H:i', strtotime($row['ngaydat'])); ?></div>
+                                    <div class="order-number">Mã đơn hàng #<?php echo $row['madh']; ?></div>
+                                    <div class="order-date">Ngày đặt: <?php echo date('d/m/Y', strtotime($row['ngaydat'])); ?></div>
                                 </div>
                                 <div class="order-status <?php echo 'status-' . strtolower(str_replace(' ', '-', $row['trangthai'])); ?>">
                                     <?php echo $row['trangthai']; ?>

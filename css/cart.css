@@ -3,6 +3,19 @@
     padding: 0;
 }
 
+.btn-back {
+    background: #28a745;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-left: 1000px;
+}
+
 .container {
     background-color: #ffffff;
     justify-content: center;

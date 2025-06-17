@@ -67,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/Cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -75,9 +75,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     <div class="container">
       
     <div class="cart-container">
+        <div class="cart-header">
          <a href="all.php" style="text-decoration: none; color: #000; font-size: 20px; font-weight: bold; margin-left: 20px; margin-top: 20px;"><i class="fas fa-arrow-left"></i></a>
         <h1><i class="fas fa-shopping-cart"></i> Giỏ hàng của bạn</h1>
-        
+        <a href="order_details.php" class="btn-back">Đơn hàng của bạn</a>
+        </div>
         <?php if (empty($cart_items)): ?>
             <div class="empty-cart">
                 <p>Giỏ hàng của bạn đang trống.</p>
@@ -97,7 +99,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 <input type="number" name="quantity" value="<?php echo $item['soluong']; ?>" min="1">
                                 <button type="submit" name="add_to_cart"><i class="fas fa-sync-alt"></i> Cập nhật</button>
                             </form>
-                            <a href="cart.php?remove=<?php echo $item['masp']; ?>" class="remove-btn" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')">
+                            <a href="cart.php?remove=<?php echo $item['masp']; ?>" class="remove-btn">
                                 <i class="fas fa-trash-alt"></i> Xóa
                             </a>
                         </div>

@@ -13,9 +13,9 @@
     
     // Kiểm tra nếu người dùng đã đăng nhập
         session_start();
-
     include "menu.php";
-    include "product.php";
+    include "banner.php";
+        include "product.php";
     include "footer.php";
     ?>
 </body>

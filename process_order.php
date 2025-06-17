@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $masp = $row['masp'];
             $soluong = $row['soluong'];
             $dongia = $row['giasp'];
-            $sql = "INSERT INTO chitietdonhang (madh, masp, soluong, dongia) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO chitietdonhang (madh, masp, soluong, dongia ) VALUES (?, ?, ?, ?)";
             $stmt2 = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt2, "iiid", $madonhang, $masp, $soluong, $dongia);
             mysqli_stmt_execute($stmt2);
