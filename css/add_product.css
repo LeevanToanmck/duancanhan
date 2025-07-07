@@ -7,19 +7,17 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    color: #333;
+    color: #000000;
 }
 
 /* Main Container */
 .add_product {
-    width: 100%;
-    max-width: 800px;
+    width: 900px;
+    max-width: 1300px;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     padding: 40px;
@@ -27,7 +25,7 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .add_product::before {
@@ -449,6 +447,3 @@ input[type="submit"]:active {
         font-size: 13px;
     }
 }
-
-
-
