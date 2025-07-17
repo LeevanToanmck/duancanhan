@@ -97,7 +97,7 @@
     outline: none;
 }
 .mua button:active{
-    transform: scale(0.98);
+    transform: scale(0.98)  ;
 }
 
 .mua button:disabled:hover{

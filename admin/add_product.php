@@ -45,10 +45,6 @@ include "../connect.php";
     <form action="add_product.php" method="post" enctype="multipart/form-data">
         <div class="add_product">
             <h2>Thêm sản phẩm mới</h2>
-            <!-- <div class="inputField">
-                <P>Mã sản phẩm:</P>
-                <input type="text" name="product_id" required>
-            </div> -->
             <div class="inputField">
                 <P>Tên sản phẩm:</P>
                 <input type="text" name="product_name" required>

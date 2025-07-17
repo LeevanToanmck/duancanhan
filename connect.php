@@ -2,7 +2,7 @@
     $sever = 'localhost';
     $user ='root';
     $pass = '';
-    $database = 'websitebanhang';
+    $database = 'duancanha';
 
     $conn = new mysqLi($sever, $user, $pass, $database);
     if ($conn ){

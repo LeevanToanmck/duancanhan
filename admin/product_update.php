@@ -13,7 +13,6 @@ $result = mysqli_query($conn, $sql);
 
 <!DOCTYPE html>
 <html lang="vi">
-    <link rel="stylesheet" href="css/product_update.css">
 <head>
     <meta charset="UTF-8">
     <title>Danh sách sản phẩm bảo hành</title>

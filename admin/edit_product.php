@@ -28,7 +28,8 @@ if (isset($_POST['update'])) {
     $soluong = $_POST['soluong'];
     
     // Xử lý upload hình ảnh
-    if (isset($_FILES['hinhanhsp']) && $_FILES['hinhanhsp']['error'] == 0) {
+    if (isset($_FILES['hinhanhsp']) && $_FILES['hinhanhsp']['error'] == 0) //
+    {
         $target_dir = "../img/WAo/";
         $target_file = $target_dir . basename($_FILES["hinhanhsp"]["name"]);
         move_uploaded_file($_FILES["hinhanhsp"]["tmp_name"], $target_file);

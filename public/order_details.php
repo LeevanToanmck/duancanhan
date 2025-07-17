@@ -17,7 +17,7 @@ $sql = "SELECT d.*, c.soluong, c.dongia, s.tensp, s.hinhanhsp
         FROM donhang d 
         JOIN chitietdonhang c ON d.madh = c.madh 
         JOIN sanpham s ON c.masp = s.masp 
-        WHERE d.makh = '$makh' 
+        WHERE d.makh = '$makh'
         ORDER BY d.ngaydat DESC";
 $result = mysqli_query($conn, $sql);
 ?>
