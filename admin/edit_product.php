@@ -25,7 +25,7 @@ if (isset($_POST['update'])) {
     $loaisp = $_POST['loaisp'];
     $giasp = $_POST['giasp'];
     $baohanh = $_POST['baohanh'];
-    $soluong = $_POST['soluong'];
+    $soluongsp = $_POST['soluongsp'];
     
     // Xử lý upload hình ảnh
     if (isset($_FILES['hinhanhsp']) && $_FILES['hinhanhsp']['error'] == 0) //
@@ -35,9 +35,9 @@ if (isset($_POST['update'])) {
         move_uploaded_file($_FILES["hinhanhsp"]["tmp_name"], $target_file);
         $hinhanhsp = $_FILES["hinhanhsp"]["name"];
         
-        $sql = "UPDATE sanpham SET tensp='$tensp', loaisp='$loaisp', giasp='$giasp', baohanh='$baohanh', hinhanhsp='$hinhanhsp', soluong='$soluong' WHERE masp='$masp'";
+        $sql = "UPDATE sanpham SET tensp='$tensp', loaisp='$loaisp', giasp='$giasp', baohanh='$baohanh', hinhanhsp='$hinhanhsp', soluongsp='$soluongsp' WHERE masp='$masp'";
     } else {
-        $sql = "UPDATE sanpham SET tensp='$tensp', loaisp='$loaisp', giasp='$giasp', baohanh='$baohanh', soluong='$soluong' WHERE masp='$masp'";
+        $sql = "UPDATE sanpham SET tensp='$tensp', loaisp='$loaisp', giasp='$giasp', baohanh='$baohanh', soluongsp='$soluongsp' WHERE masp='$masp'";
     }
     
     if (mysqli_query($conn, $sql)) {
@@ -73,7 +73,7 @@ if (isset($_POST['update'])) {
             </div>
             <div class="form-group">
                 <label>Số lượng:</label>
-                <input type="number" name="soluong" value="<?php echo $product['soluong']; ?>" required>
+                <input type="number" name="soluongsp" value="<?php echo $product['soluongsp']; ?>" required>
             </div>
             <div class="form-group">
                 <label>Loại sản phẩm:</label>

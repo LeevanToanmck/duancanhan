@@ -45,7 +45,6 @@ $result = mysqli_query($conn, $sql);
                 <?php 
                 $current_order = null;
                 $order_total = 0;
-                
                 while ($row = mysqli_fetch_assoc($result)): 
                     if ($current_order !== $row['madh']):
                         if ($current_order !== null):

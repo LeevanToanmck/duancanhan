@@ -1,6 +1,6 @@
 -- Tạo database
-CREATE DATABASE IF NOT EXISTS duancanha;
-USE duancanha;
+CREATE DATABASE IF NOT EXISTS drippedstonie;
+USE drippedstonie;
 
 -- Bảng thành viên (users)
 CREATE TABLE thanhvien (
@@ -17,14 +17,14 @@ CREATE TABLE thanhvien (
 
 -- Bảng sản phẩm
 CREATE TABLE sanpham (
-    masp VARCHAR(20) PRIMARY KEY,
+    masp int  AUTO_INCREMENT PRIMARY KEY,
     tensp VARCHAR(255) NOT NULL,
     loaisp VARCHAR(50) NOT NULL,
     giasp DECIMAL(15,2) NOT NULL,
     baohanh VARCHAR(50),
     hinhanhsp VARCHAR(255),
     mota TEXT,
-    soluong INT DEFAULT 0,
+    soluongsp INT,
     ngaythem TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -32,21 +32,27 @@ CREATE TABLE sanpham (
 CREATE TABLE donhang (
     madh INT AUTO_INCREMENT PRIMARY KEY,
     makh INT NOT NULL,
-    ngaydat TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    tongtien DECIMAL(15,2) NOT NULL,
-    trangthai VARCHAR(50) DEFAULT 'Chờ xử lý',
+    hoten VARCHAR(100) NOT NULL,
+    sdtgiaohang VARCHAR(20) NOT NULL,
     diachigiaohang TEXT NOT NULL,
-    sdtgiaohang VARCHAR(15) NOT NULL,
+    thanhpho VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    ghichu VARCHAR(100) NOT NULL,
+    tongtien  DECIMAL(10,2) NOT NULL,
+    phuongthuctt VARCHAR(50) NOT NULL,
+    ngaydat DATETIME NOT NULL,
+    trangthai VARCHAR(50) NOT NULL,
     FOREIGN KEY (makh) REFERENCES thanhvien(id)
 );
 
 -- Bảng chi tiết đơn hàng
 CREATE TABLE chitietdonhang (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+     id INT AUTO_INCREMENT PRIMARY KEY,
     madh INT NOT NULL,
-    masp VARCHAR(20) NOT NULL,
+    masp INT NOT NULL,
     soluong INT NOT NULL,
-    dongia DECIMAL(15,2) NOT NULL,
+    dongia DECIMAL(10,2) NOT NULL,
+    tongtien DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (madh) REFERENCES donhang(madh),
     FOREIGN KEY (masp) REFERENCES sanpham(masp)
 );
@@ -55,7 +61,7 @@ CREATE TABLE chitietdonhang (
 CREATE TABLE giohang (
     id INT AUTO_INCREMENT PRIMARY KEY,
     makh INT NOT NULL,
-    masp VARCHAR(20) NOT NULL,
+    masp int NOT NULL,
     soluong INT NOT NULL,
     ngaythem TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (makh) REFERENCES thanhvien(id),

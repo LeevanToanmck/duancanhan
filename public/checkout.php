@@ -1,5 +1,6 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) session_start();
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
 
 // Giả sử giỏ hàng lưu trong $_SESSION['cart'] dạng: [masp => soluong]
 include "../connect.php";
@@ -23,6 +24,7 @@ if (isset($_SESSION['id'])) {
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,10 +32,11 @@ if (isset($_SESSION['id'])) {
     <link rel="stylesheet" href="../css/checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <a href="cart.php" class="back-button">
-            <i class="fas fa-arrow-left"></i>   
+            <i class="fas fa-arrow-left"></i>
         </a>
         <?php if (empty($cart_items)): ?>
             <div class="empty-cart">
@@ -59,15 +62,16 @@ if (isset($_SESSION['id'])) {
                     <label>Địa chỉ email *</label>
                     <input type="email" name="email" required>
                     <div>
-                    
+
                     </div>
                     <label>Ghi chú (tuỳ chọn)</label>
-                    <textarea name="note" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+                    <textarea name="note"
+                        placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
                     <label>Phương thức thanh toán *</label>
-<select class="pttt" name="phuongthuctt" required>
-    <option value="Chuyển khoản">Chuyển khoản</option>
-    <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
-</select>
+                    <select class="pttt" name="phuongthuctt" required>
+                        <option value="Chuyển khoản">Chuyển khoản</option>
+                        <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
+                    </select>
                     <button type="submit">Đặt hàng</button>
                 </div>
                 <div class="order-summary">
@@ -96,4 +100,5 @@ if (isset($_SESSION['id'])) {
     </div>
     <?php include "footer.php"; ?>
 </body>
+
 </html>
